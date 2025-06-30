@@ -76,11 +76,11 @@ impl TaskFetchState {
     }
 
     pub fn increase_backoff_for_error(&mut self) {
-        // self.backoff_duration = std::cmp::min(
-        //     self.backoff_duration * 2,
-        //     Duration::from_millis(BACKOFF_DURATION * 2),
-        // );
-        self.backoff_duration = Duration::from_secs(5);
+        self.backoff_duration = std::cmp::min(
+            self.backoff_duration * 2,
+            Duration::from_millis(BACKOFF_DURATION * 2),
+        );
+       // self.backoff_duration = Duration::from_secs(5);
     }
 }
 
