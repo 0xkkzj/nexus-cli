@@ -23,7 +23,7 @@ const BATCH_SIZE: usize = 50; // Fetch this many tasks at once
 const LOW_WATER_MARK: usize = BATCH_SIZE / 5; // Fetch new tasks when queue drops below this
 const TASK_QUEUE_SIZE: usize = 100; // Queue sizes from runtime
 const MAX_404S_BEFORE_GIVING_UP: usize = 5; // Allow several 404s before stopping batch fetch
-const BACKOFF_DURATION: u64 = 3000; // 30 seconds
+const BACKOFF_DURATION: u64 = 30000; // 30 seconds
 const QUEUE_LOG_INTERVAL: u64 = 30000; // 30 seconds
 
 /// State for managing task fetching behavior
